@@ -1,0 +1,1 @@
+CREATE DATABASE hypnos_dev_db;
