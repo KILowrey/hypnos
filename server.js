@@ -94,9 +94,9 @@ passport.deserializeUser(function (user, done) {
 // Including the routers and userInViews middleware
 
 var userInViews = require('./config/middleware/userInViews');
-var authRouter = require('./routes/auth');
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var authRouter = require('./controllers/auth');
+var indexRouter = require('./controllers/index');
+var usersRouter = require('./controllers/users');
 
 // ..
 app.use(userInViews());
