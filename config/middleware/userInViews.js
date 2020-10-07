@@ -1,4 +1,5 @@
-// Making the user available in the views
+// The purpose of this middleware is to have the user object available for all views.
+// this is important because the user is used in layout.pug
 
 module.exports = function () {
   return function (req, res, next) {

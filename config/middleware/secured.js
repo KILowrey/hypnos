@@ -1,4 +1,5 @@
-// Middleware to protect routes
+// This is an example middleware that checks if the user is logged in.
+// if the user is not logged in, it stroes the requested url in 'returnTo' attribute and then redirects to '/login'
 
 module.exports = function () {
   return function secured (req, res, next) {
