@@ -6,7 +6,10 @@
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha ./tests/**/*.js",
     "run": "node ./server.js",
-    "watch": "nodemon ./server.js"
+
+    "watch": "nodemon ./server.js",
+    "start:test": "NODE_ENV=test node server.js"
+
   },
   "repository": {
     "type": "git",
