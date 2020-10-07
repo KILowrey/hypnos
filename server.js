@@ -1,8 +1,6 @@
-const express = require('express');
-const expressHandlebars = require('express-handlebars');
-
-const app = express();
-const PORT = process.env.PORT || 8080;
+// Not totally sure if this will work. Def look at later.
+const app = require('./config/app.js');
+const PORT = process.env.PORT || 3000;
 
 app.use('/public', express.static(__dirname + '/public'));
 
