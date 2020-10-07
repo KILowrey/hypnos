@@ -1,26 +1,3 @@
-const express = require('express');
-const expressHandlebars = require('express-handlebars');
-
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-app.use('/public', express.static(__dirname + '/public'));
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
-
-require('./controllers/view-routes')(app);
-require('./controllers/api-routes')(app);
-
-app.listen(PORT, function() {
-    console.log('listening on port ' + PORT);
-});
-
-// APP
-
 // ================================================
 // Configure express-session
 
@@ -93,10 +70,10 @@ passport.deserializeUser(function (user, done) {
 // ==================================================
 // Including the routers and userInViews middleware
 
-var userInViews = require('./config/middleware/userInViews');
-var authRouter = require('./controllers/auth');
-var indexRouter = require('./controllers/index');
-var usersRouter = require('./controllers/users');
+var userInViews = require('./middleware/userInViews');
+var authRouter = require('../controllers/auth');
+var indexRouter = require('../controllers/index');
+var usersRouter = require('../controllers/users');
 
 // ..
 app.use(userInViews());
