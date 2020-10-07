@@ -1,7 +1,7 @@
 // Create the user profile route
 
 var express = require('express');
-var secured = require('../lib/middleware/secured');
+var secured = require('../config/middleware/secured');
 var router = express.Router();
 
 /* GET user profile. */
