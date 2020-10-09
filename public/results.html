@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+​
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hypnos|Recomendations</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <!-- <link rel= "stylesheet" href= "../public/stylesheets/materialize.css"> -->
+    <!-- link for chart.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- icons link for materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- font link for google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=FONT"> ​
+</head>
+​
+<nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="sidenav" class="right hide-on-med-and-down, sidenav">
+            <li><a href="#">User</a></li>
+        </ul>
+        <ul id="nav-mobile" class="sidenav" class="right hide-on-med-and-down, sidenav">
+            <li><a href="#">Team</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">Team</a></li>
+        </ul>
+
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+<body>
+
+    <div class="row">
+        <div class="col s12" style="background-color: green;">
+            <h5 style="text-align: center; font-family:Pacifico">Sleep Tracker results</h5>
+        </div>
+        <div class="col s12 m4 l2" style="background-color: slategray;">
+            <p>user</p>
+            <p class="flow-text" style="font-family: Pacifico;">to the right you will see the hours of sleep you got along with your recommended hours of sleep based on your age</p>
+        </div>
+        <div class="col s12 m4 l8">
+            <canvas id="lineChart" height="1" width="3"></canvas>
+        </div>
+        <div class="col s12 m4 l2" style="background-color: rgb(206, 206, 250);">
+            <p class="flow-text" style="font-family: Pacifico;">The average amount of sleep that recommended depends on your age, needing more when your younger and less when your older</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6 l3" style="background-color: yellow;">
+            <p>s12 m6 l3</p>
+        </div>
+        <div class="col s12 m6 l3" style="background-color: olivedrab;">
+            <p>s12 m6 l3</p>
+        </div>
+        <div class="col s12 m6 l3" style="background-color: skyblue;">
+            <p>s12 m6 l3</p>
+        </div>
+        <div class="col s12 m6 l3" style="background-color: blueviolet;">
+            <p>s12 m6 l3</p>
+        </div>
+    </div>
+
+
+    <!-- script for chart. 
+        Could be put in own js file if nesssary jut dont know where
+     be sure to link pages if/when js file is created -->
+    <script>
+        // var sleepAge = number get from DB
+        var ctx = document.getElementById('lineChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ['Sunday Night', 'Monday Night', 'Tuesday Night', 'Wednesday Night', 'Thursday Night', 'Friday Night', 'Saturday Night'],
+                datasets: [{
+                    label: 'Your sleep',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 66, 100)',
+                    data: [8, 6, 7, 9, 8.5, 6.5, 5.8] // each integer corresponds with the labels, add data as you add labels
+                }, {
+
+                    label: 'Recommended',
+                    backgroundColor: 'rgb(0, 150, 255)',
+                    borderColor: 'rgb(0, 99, 132)',
+                    data: [8, 8, 8, 8, 8, 8, 8] //  insert var sleepAge or get age from database
+
+                }]
+
+            },
+
+
+            // Configuration options go here
+            options: {}
+        });
+    </script>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>
