@@ -40,33 +40,30 @@
     <section>
         <div class="container">
             <div class="row">
+                {{#unless user.age}}
                 <form class="col s10">
-                    <div class="input-field col s8">
-                        <label for="uname">Username:</label><br>
-                        <input type="text" id="uname" name="uname"><br>
-                    </div>
-                        <div class="input-field col s6">
-                        <label for="fname">First name:</label><br>
-                        <input id="icon_prefix" type="text" class="validate">
-                        </div>
-                        
-                        <div class="input-field col s6">
-                        <label for="lname">Last name:</label><br>
-                        <input id="last_name" type="text" class="validate"><br>
-                        </div>
-                        <div class="input-field col s6">
-                        <label for="age">Age:</label><br>
-                        <input type="text" id="age" name="age"><br>
-                        </div>
-                        <div class="input-field col s6">
-                        <label for="email">Email:</label><br>
-                        <input type="text" id="email" name="email"><br>
-                        </div>
-                        <div class="input-field col s6">  
-                    <input type="submit" value="Submit">
-                        </div>
+                                   
+                    <h6>How long did you take to fall asleep?</h6>
+                    <p><label>
+                        <input type="checkbox" /><span>14-17 years</span>
+                    </label></p>
+                    <p><label>
+                        <input type="checkbox" /><span>18-25 years</span>
+                    </label></p>
+                    <p><label>
+                        <input type="checkbox" /><span>26-64 years</span>
+                    </label></p>
+                    <p><label>
+                        <input type="checkbox" /><span>> 65 years</span>
+                    </label></p>
+                         
                     
+                    <div class="input-field col s6">  
+                        <input type="submit" value="Submit">
+                    </div>
+                        
                 </form>
+                {{/unless}}
             </div>
         </div>           
 <br></br>
