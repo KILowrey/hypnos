@@ -1,50 +1,19 @@
-// // Not totally sure if this will work. Def look at later.
-// const app = require('./config/app.js');
-// const PORT = process.env.PORT || 3000;
-
-// app.use('/public', express.static(__dirname + '/public'));
-
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
-
-// app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
-// app.set('view engine', 'handlebars');
-
-// require('./controllers/view-routes')(app);
-// require('./controllers/api-routes')(app);
-
-// app.listen(PORT, function() {
-//     console.log('listening on port ' + PORT);
-// });
-
 var app = require('./config/app');
 var http = require('http');
 
-/**
- * Get port from environment and store in Express.
- */
-
+// Get port from environment and store in Express.
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
-/**
- * Create HTTP server.
- */
-
+// Create HTTP server.
 var server = http.createServer(app);
 
-/**
- * Listen on provided port, on all network interfaces.
- */
-
+// Listen on provided port, on all network interfaces.
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
-/**
- * Normalize a port into a number, string, or false.
- */
-
+// Normalize a port into a number, string, or false.
 function normalizePort(val) {
     var port = parseInt(val, 10);
 
@@ -61,10 +30,7 @@ function normalizePort(val) {
     return false;
 }
 
-/**
- * Event listener for HTTP server "error" event.
- */
-
+// Event listener for HTTP server "error" event.
 function onError(error) {
     if (error.syscall !== 'listen') {
         throw error;
@@ -89,10 +55,7 @@ function onError(error) {
     }
 }
 
-/**
- * Event listener for HTTP server "listening" event.
- */
-
+// Event listener for HTTP server "listening" event.
 function onListening() {
     var addr = server.address();
     var bind = typeof addr === 'string'
