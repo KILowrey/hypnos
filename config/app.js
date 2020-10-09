@@ -49,6 +49,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 app.use(cookieParser());
+app.use(auth0handlebars);
 
 // config express-session
 var sess = {
