@@ -15,44 +15,49 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
 ​
 </head>
-    ​<nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">Logo</a>
-            <ul id="nav-mobile" class="sidenav" class="right hide-on-med-and-down, sidenav">
-                <li><a href="#">User</a></li>
-            </ul>
-            <ul id="nav-mobile" class="sidenav" class="right hide-on-med-and-down, sidenav">
-                <li><a href="#">Team</a></li>
-            </ul>
 
-
-
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Team</a></li>
-            </ul>
-            
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
-    <body>
+<body>
+        <nav class="navBar" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="#" class="brand-logo"> Hypnos Logo</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Team</a></li></ul>
+                <ul id="nav-mobile" class="sidenav">
+                    <li><a href="#">Team</a></li></ul>
     
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Main</a></li></ul>
+                <ul id="nav-mobile" class="sidenav">
+                    <li><a href="#">Main</a></li></ul>
+    
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li></ul>
+                <ul id="nav-mobile" class="sidenav">
+                    <li><a href="#">Home</a></li></ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+
+
 <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
         <div class="container">
             <br><br>
-            <h1 class="header center teal-text text-lighten-2">Project Hypnos</h1>
+            <h1 class=" center teal-text text-lighten-2">HYPNOS</h1>
             <div class="row center">
-                <h5 class="header col s12 light">An app to help you gain more quality sleep</h5>
+                <h5 class="header col s12 light">An app to help you gain more quality to sleep</h5>
             </div>
             <div class="row center">
-                <a href="http://materializecss.com/getting-started.html" id="download-button"
-                    class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+                <a href="..." class="btn-large">Get Started</a> <!-- Add onBoard html-->
+                    
+
+
             </div>
             <br><br>
 
         </div>
     </div>
-    <div class="parallax"><img src="sleep 1.jpg" alt="Unsplashed background sleep 1"></div>
+    <!--<div class="parallax"><img src=" " alt="Unsplashed background wide wake 2"></div>-->
 </div>
 
 
@@ -103,52 +108,140 @@
 <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
         <div class="container">
+            <br>
             <div class="row center">
                 <h5 class="header col s12 light">“Your future depends on your dreams, so go to sleep.” – Mesut
                     Barazany.</h5>
             </div>
         </div>
     </div>
-    <div class="parallax"><img src="wide wake2.jpg" alt="Unsplashed background wide wake 2"></div>
+    <!--<div class="parallax"><img src=" " alt="Unsplashed background wide wake 2"></div>-->
 </div>
 
 
-<footer class="page-footer teal">
+<footer>
     <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">The Team</h5>
-                <p class="grey-text text-lighten-4">We are a scrum squad of coding bootcamp students based in San Diego, CA
-                    working on this project like it's our full time job. Any feedback you can provide would be much
-                    appreicated.</p>
-
-
-            </div>
-            <div class="col l3 s12">
-                <h5 class="white-text">Connect with us</h5>
-                <ul>
-                    <li><a class="white-text" href="#!">Kira</a></li>
-                    <li><a class="white-text" href="#!">Robert</a></li>
-                    <li><a class="white-text" href="#!">Diogo</a></li>
-                    <li><a class="white-text" href="#!">Jeneth</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Copyright place holder here</a>
-        </div>
-    </div>
-</footer>
-
+        Made by <a href="http://materializecss.com">Copyright &copy; 2020</a>
+    </div>  
+  </footer>
 
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
 
+    <style>
+
+        body {
+            font-family: 'lucida console', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 20px;
+            color: #666;
+            line-height: 20px;
+            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQUh9u104ViUb4YRgFPiimwJVbGh2o36cahSw&usqp=CAU");
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .navBar {
+            border: 3px solid #ddd;
+            margin: 20px 0 0 0;
+            height: 90px;
+            background: white;
+            border-top: 8px solid	#0a87c2;
+            border-bottom: 8px solid #0a87c2;
+        }
+        
+        nav .brand-logo, 
+            .sidenav-trigger {
+            color: #666;
+            font-size: 30px;
+            height: auto;
+        }
+        
+        nav ul a {
+            font-size: 20px;
+            color: #666;
+            display: block;
+            padding: 0 10px;
+            padding-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .parallax-container {
+            position: relative;
+            overflow: hidden;
+            height: 500px;
+            background: url("https://images.unsplash.com/photo-1508615070457-7baeba4003ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+        }
+
+        .valign-wrapper{
+        text-align: center;
+        }
+
+        #link-box {height: 300px;} 
+        
+        .main-section {
+            border: 3px solid #ddd;
+            border-radius: 50px;
+            padding: 50px;
+            padding-top: 10px;
+            margin: 30px 0 40px 0;
+            background: white;
+            width: 800px;
+        
+        }
+        
+        label {
+            font-size: .8rem;
+            color: #777;
+        }
+        
+        .range-field {
+            width: 600px;
+        }
+
+        .btn-large {
+            color: white;
+            background-color: #0a87c2;
+                            
+        }
+        
+        .btn {
+            border-radius: 5px;
+            height: 50px;
+            width: 120px;
+            font-size: 20px;
+            background-color: #0a87c2;
+            color: white;
+            border-color: black;
+            border: 3px  #666;
+            margin-right: 800px;
+        
+        }
+        
+        footer {
+            height: 80px;
+            margin-top: auto;
+            padding: 20px 0;
+            clear: both;
+            color: #fff;
+            color: #ccc;
+            font-size: 15px;
+            text-align: center;
+            background: #777;
+            border-top: 8px solid	#0a87c2;
+            border-bottom: 8px solid	#0a87c2;
+        }
+        
+        /** Linkedin and gitHub logos**/
+        .social {
+            width: 30%;
+            margin-left: 7px;
+        }
+        
+        
+    </style>
+
+
 </body>
-​
-</html>
+​</html>
