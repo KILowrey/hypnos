@@ -14,7 +14,7 @@ A Sleep Tracker App
 
 ## Description
 
-[Link to deployed app]()
+[Link to deployed app](https://project-hypnos.herokuapp.com/)
 
 **Hypnos** is a sleep tracker app designed by Jeneth, Kira, Diogo, and Robert for the second of three projects in Coding Boot-camp at UCSD Extention. 
 
