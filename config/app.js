@@ -8,6 +8,8 @@ var dotenv = require('dotenv');
 var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
 var userInViews = require('./middleware/userInViews');
+var auth0handlebars = require('./middleware/auth0handlebars');
+var secured = require('./middleware/secured');
 var authRouter = require('../controllers/auth');
 var indexRouter = require('../controllers/index');
 var usersRouter = require('../controllers/users');
@@ -49,6 +51,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 app.use(cookieParser());
+app.use(auth0handlebars);
 
 // config express-session
 var sess = {
