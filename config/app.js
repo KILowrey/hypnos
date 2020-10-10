@@ -9,7 +9,6 @@ var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
 var userInViews = require('./middleware/userInViews');
 var auth0handlebars = require('./middleware/auth0handlebars');
-var secured = require('./middleware/secured');
 var authRouter = require('../controllers/auth');
 var indexRouter = require('../controllers/index');
 var usersRouter = require('../controllers/users');
