@@ -7,10 +7,10 @@ var session = require('express-session');
 var dotenv = require('dotenv');
 var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
-var userInViews = require('./lib/middleware/userInViews');
-var authRouter = require('./controller/auth');
-var indexRouter = require('./controller/index');
-var usersRouter = require('./controller/users');
+var userInViews = require('./middleware/userInViews');
+var authRouter = require('../controllers/auth');
+var indexRouter = require('../controllers/index');
+var usersRouter = require('../controllers/users');
 
 dotenv.config();
 
