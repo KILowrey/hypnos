@@ -127,7 +127,7 @@ pre {
   font-size: 20px;
   color: #666;
   line-height: 20px;
-  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQUh9u104ViUb4YRgFPiimwJVbGh2o36cahSw&usqp=CAU");
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQUh9u104ViUb4YRgFPiimwJVbGh2o36cahSw&usqp=CAU");
   display: flex;
   flex-direction: column;
 }
@@ -169,7 +169,7 @@ nav ul a {
   position: relative;
   overflow: hidden;
   height: 500px;
-  background: url("https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80");
+  background-image: url("https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80");
 }
 .team-container {
   min-height: 100px;
