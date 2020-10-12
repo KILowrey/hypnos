@@ -6,6 +6,28 @@
  * Made By MaterializeCSS.com
  */
 
+ /* auth CSS */
+ .w3-container a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+pre {
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #343f5f;
+  color: #fdfeff;
+  overflow: scroll;
+  border: 1px #929090 solid;
+  padding: 15px
+}
+
+.w3-card-4 {
+  padding: 15px;
+}
+ /******************************/
+
+
  nav ul a,
  nav .brand-logo {
    color: #444;
@@ -19,18 +41,18 @@
    color: #26a69a;
  }
  
- .parallax-container {
+ .index-container {
    min-height: 380px;
    line-height: 0;
    height: auto;
    color: rgba(255,255,255,.9);
  }
-   .parallax-container .section {
+   .index-container .section {
      width: 100%;
    }
  
  @media only screen and (max-width : 992px) {
-   .parallax-container .section {
+   .index-container .section {
      position: absolute;
      top: 40%;
    }
@@ -51,10 +73,55 @@
  .icon-block .material-icons {
    font-size: inherit;
  }
- 
- footer.page-footer {
-   margin: 0;
- }
+
+ /* MENU Btn*/
+ @media only screen and (min-width: 601px) {
+  nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+      height: 80px;
+      line-height: 64px;
+  }
+}
+
+  nav .sidenav-trigger i {
+      height: 56px;
+      line-height: 56px;
+  }
+  
+  nav i.material-icons {
+  display: block;
+  font-size: 24px;
+  height: 56px;
+  line-height: 56px;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.sidenav-trigger {
+  color: #0baaf4;
+}
+
+
+.acollpse .navbar-collapse {  
+  display: flex
+}
+
+/***************************/
+
+
  body {
   font-family: 'lucida console', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
@@ -128,6 +195,7 @@ nav ul a {
 
 .text-lighten-2 {
   color: White;
+  padding-top: 75px;
 }
 
 .valign-wrapper{
@@ -175,6 +243,10 @@ label {
 
 }
 
+footer.page-footer {
+  margin: 0;
+}
+
 footer {
   height: 80px;
   margin-top: auto;
@@ -191,7 +263,7 @@ footer {
 
 .color {
   color:white;
-  
+
 }
 
 /** Linkedin and gitHub logos**/
