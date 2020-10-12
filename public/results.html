@@ -77,9 +77,12 @@
      be sure to link pages if/when js file is created -->
     <script>
         // var sleepAge = number get from DB
+        // var avgSleep = function() {
+        //     GET age from  specific user table
+        // }
         var ctx = document.getElementById('lineChart').getContext('2d');
         var chart = new Chart(ctx, {
-            // The type of chart we want to create
+            // The type of chart
             type: 'line',
 
             // The data for our dataset
@@ -91,7 +94,6 @@
                     borderColor: 'rgb(210, 66, 100)',
                     data: [8, 6, 7, 9, 8.5, 6.5, 5.8] // each integer corresponds with the labels, add data as you add labels
                 }, {
-
                     label: 'Recommended',
                     backgroundColor: 'rgb(0, 150, 255)',
                     borderColor: 'rgb(0, 99, 255)',
