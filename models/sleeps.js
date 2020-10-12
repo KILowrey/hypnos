@@ -1,17 +1,28 @@
+const calcDate = require('./scripts/date');
+const rightNow = require('./scripts/date');
+const calcHours = require('./scripts/date');
+
 // Table of all User's Sleeps
 module.exports = function(sequelize, DataTypes) {
   const Sleeps = sequelize.define('Sleeps', {
-    userID: {
-      // take from profiles.js
+    id: {
+      type: DataTypes.BIGINT,
+      autoIncrement: true,
+      primaryKey: true
+    },
+    userID: { //talk to TA 'bout this
+      type: DataTypes.BIGINT,
+      references: 'Profiles', //Table name
+      referencesKey: 'id' //column name
     },
     date: {
-      // insert function that calls on the previous date rather than this one.
+      calcDate //finds yesterday and displays as string
     },
     toBed: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isBefore: "" // the current date time
+        isBefore: rightNow //what it looks like
       }
     },
     toSleep: {
@@ -22,18 +33,19 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        wakeTime(value) {
-          // make sure that they are entering something that is after their toBed time combined with the toSleep time
-        }
+        isAfter: rightNow
       }
+    },
+    hours: {
+      calcHours //function that calculates the hours slept
     },
     restful: {
       type: DataTypes.BOOLEAN,
-      allowNull: true
+      allowNull: true //check w/ Diogo
     },
     rested: {
       type: DataTypes.BOOLEAN,
-      allowNull: true
+      allowNull: true //check w/ Diogo
     }
   });
   return Sleeps;

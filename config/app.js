@@ -10,8 +10,7 @@ var Auth0Strategy = require('passport-auth0');
 var userInViews = require('./middleware/userInViews');
 var auth0handlebars = require('./middleware/auth0handlebars');
 var authRouter = require('../controllers/auth');
-var indexRouter = require('../controllers/index');
-var usersRouter = require('../controllers/users');
+var pageRouter = require('../controllers/page-routes');
 
 dotenv.config();
 
@@ -78,8 +77,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes here:
 app.use(userInViews());
 app.use('/', authRouter);
-app.use('/', indexRouter);
-app.use('/', usersRouter);
+app.use('/', pageRouter);
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {
