@@ -12,7 +12,6 @@
     <!-- font link for google fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
-    <link href="nouislider.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,19 +36,19 @@
                 {{#unless user.age}}
                 <div class="col-md-7 main-section" id="link-box" >
 
-                    <h5>Please select the range of your age?</h5>
+                    <h5>Please select the range of your age</h5>
                     <form action="#">
                         <p><label>
                             <input class="with-gap" name="group1" type="radio"/>
-                            <span>14-17 years</span>
+                            <span>14 - 17 years</span>
                         </label></p>
                         <p><label>
                               <input class="with-gap" name="group1" type="radio"/>
-                              <span>18-25 years</span>
+                              <span>18 - 25 years</span>
                         </label></p>
                         <p><label>
                             <input class="with-gap btn" name="group1" type="radio"/>
-                            <span>26-64 years</span>
+                            <span>26 - 64 years</span>
                       </label></p>
                       <p><label>
                         <input class="with-gap btn" name="group1" type="radio"/>
@@ -70,17 +69,47 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-sm-12 main-section">
-                    <h4 class="h1">Survey questions:</h4>
-
+                  
                     <h5>What time did you go to bed?</h5>
-                    <p class="range-field">
-                        <input type="range" id="slider"/>
-                    </p><br>
+                    <form action="#">
+                        <p><label>
+                            <input class="with-gap" name="group1" type="radio"  />
+                            <span>7:00 - 9:00 pm </span>
+                        </label></p>
+                        <p><label>
+                              <input class="with-gap" name="group1" type="radio"  />
+                              <span>9:00 - 11:00 pm</span>
+                        </label></p>
+                        <p><label>
+                            <input class="with-gap" name="group1" type="radio"  />
+                            <span>11:00 pm - 1:00 am</span>
+                      </label></p>
+                      <p><label>
+                        <input class="with-gap" name="group1" type="radio"  />
+                        <span>1:00 am - 3:00 am</span>
+                     </label></p>
+                    </form> <br>
+
 
                     <h5>What time did you wake up?</h5>
-                    <p class="range-field">
-                        <input type="range" id="slider"/>
-                    </p><br>
+                    <form action="#">
+                        <p><label>
+                            <input class="with-gap" name="group1" type="radio"  />
+                            <span>3:00 - 5:00 am </span>
+                        </label></p>
+                        <p><label>
+                              <input class="with-gap" name="group1" type="radio"  />
+                              <span>5:00 - 7:00 am</span>
+                        </label></p>
+                        <p><label>
+                            <input class="with-gap" name="group1" type="radio"  />
+                            <span>7:00 - 9:00 am</span>
+                      </label></p>
+                      <p><label>
+                        <input class="with-gap" name="group1" type="radio"  />
+                        <span>9:00 am - 11:00 am</span>
+                     </label></p>
+                    </form> <br>
 
                     <h5>How long did you take to fall asleep?</h5>
                     <form action="#">
@@ -132,12 +161,9 @@
 
 
     <!--  Scripts-->
-    <script src="js/nouislider.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
-
-
+    <!--<script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>-->
 
 </body>
 ​</html>
