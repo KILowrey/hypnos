@@ -1,10 +1,3 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
 
  /* auth CSS */
  .w3-container a {
@@ -25,8 +18,8 @@ pre {
 .w3-card-4 {
   padding: 15px;
 }
- /******************************/
 
+ /******************************/
 
  nav ul a,
  nav .brand-logo {
@@ -135,21 +128,21 @@ pre {
   border: 3px solid #ddd;
   margin: 20px 0 0 0;
   height: 90px;
-  background: white;
+  background: #777;
   border-top: 8px solid	 #0baaf4;
   border-bottom: 8px solid  #0baaf4;
 }
 
 nav .brand-logo, 
   .sidenav-trigger {
-  color: #666;
-  font-size: 30px;
+  color: white;
+  font-size: 35px;
   height: auto;
 }
 
 nav ul a {
-  font-size: 20px;
-  color: #666;
+  font-size: 23px;
+  color: white;
   display: block;
   padding: 10 10px;
   cursor: pointer;
@@ -160,15 +153,17 @@ nav ul a {
   line-height: 110%;
 }
 
+
+
 .info {
   text-align: justify;
-
 }
 
 
 .text-team {
   font-size: 50px;
   color: #0baaf4;
+  text-shadow: 2px 2px #666;
   
 }
 
@@ -176,21 +171,14 @@ nav ul a {
   min-height: 100px;
   line-height: 0;
   height: auto;
+  padding-top: 60px;
   color: rgba(255,255,255,.9);
   position: relative;
   overflow: hidden;
   height: 500px;
-  background-image: url("https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80");
-}
-.team-container {
-  min-height: 100px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-  position: relative;
-  overflow: hidden;
-  height: 500px;
-  background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+  background-image: url("https://images.unsplash.com/photo-1505051508008-923feaf90180?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+  background-size: 1700px 600px;
+  background-repeat: no-repeat;
 }
 
 .quote-container {
@@ -202,15 +190,41 @@ nav ul a {
   overflow: hidden;
   height: 500px;
   background: url("https://images.unsplash.com/photo-1514519273132-6a1abd48302c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
-}
-
-.text-lighten-2 {
-  color: White;
-  padding-top: 75px;
+  background-size: 1700px 600px;
+  background-repeat: no-repeat;
 }
 
 .valign-wrapper{
-text-align: center;
+  text-align: center;
+}
+
+.team-container {
+  min-height: 100px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+  background-size: 1700px 800px;
+  opacity: 0.9;
+  background-repeat: no-repeat;
+}
+
+.teaminfo {
+  font-size: 32px;
+  text-align: justify, center;
+  text-shadow: 2px 2px black;
+  color: whitesmoke;
+  line-height: 110%;
+}
+
+.text-lighten-2 {
+  color:#0baaf4;
+  padding-top: 2px;
+  text-shadow: 2px 2px #666;
+  
 }
 
 #link-box {
@@ -248,7 +262,6 @@ label {
   width: 180px;  
   font-size: 18px;
   border: 5px  #666;
-
      
 }
 
@@ -261,9 +274,9 @@ label {
   color: white;
   border-color: black;
   border: 3px  #666;
+  margin-right: 400px;
 
 }
-
 
 /* ONBOARD HTML*/
 
@@ -286,38 +299,9 @@ label {
   background-color: #0baaf4;
 }
 
-
-
 footer.page-footer {
   margin: 0;
 }
-
-footer {
-  height: 80px;
-  margin-top: auto;
-  padding: 20px 0;
-  clear: both;
-  color: white;
-  color: white;
-  font-size: 15px;
-  text-align: center;
-  background: #777;
-  border-top: 8px solid	 #0baaf4;
-  border-bottom: 8px solid	 #0baaf4;
-}
-
-.color {
-  color:white;
-
-}
-
-/** Linkedin and gitHub logos**/
-.social {
-  width: 30%;
-  margin-left: 7px;
-}
-
-
 
 @media only screen and (min-width: 993px) {
   nav a.sidenav-trigger {
@@ -338,7 +322,6 @@ nav .sidenav-trigger i {
   line-height: 56px;
 }
 
-
 @media only screen and (min-width: 601px) {
   nav.nav-extended .nav-wrapper {
     min-height: 64px;
@@ -350,4 +333,27 @@ nav .sidenav-trigger i {
   .navbar-fixed {
     height: 64px;
   }
+}
+
+.color {
+  color:white;
+}
+
+.social {
+  width: 30%;
+  margin-left: 7px;
+}
+
+footer {
+  height: 80px;
+  margin-top: auto;
+  padding: 20px 0;
+  clear: both;
+  color: white;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  background: #777;
+  border-top: 8px solid	 #0baaf4;
+  border-bottom: 8px solid	 #0baaf4;
 }
