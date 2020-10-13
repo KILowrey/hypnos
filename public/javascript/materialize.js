@@ -5453,6 +5453,7 @@ $jscomp.polyfill = function (e, r, p, m) {
    * @class
    */
 
+   
   var Sidenav = function (_Component8) {
     _inherits(Sidenav, _Component8);
 
