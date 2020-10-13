@@ -1,7 +1,6 @@
 // Dependencies
 var express = require('express');
 var exphbs = require("express-handlebars");
-var path = require('path');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var dotenv = require('dotenv');
