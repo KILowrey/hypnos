@@ -8,7 +8,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../public/stylesheets/style.css">
-    <!-- <link rel= "stylesheet" href= "../public/stylesheets/materialize.css"> -->
+    <!-- <link rel="stylesheet" href="../public/stylesheets/materialize.css"> -->
     <!-- link for chart.js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -36,47 +36,53 @@
     </div>
 </nav>
 
-<body>
+<body style="background-image: url(../public/images/Emerald-Bay-sunset-by-Levi-Bare.jpg);background-size: cover;">
+    <div class="chart-container" style="position: relative;">
+        <div class="row">
+            <div class="col s12" style="background-color: rgba(0, 128, 0, 0.116);">
+                <h5 style="text-align: center; font-family:Pacifico">Sleep Tracker results</h5>
+            </div>
+            <div class="col s12 m4 l2" style="background-color: slategray;">
+                <p>{{{user}}}</p>
+                <p class="flow-text" style="font-family: Pacifico;"></p>
+            </div>
+            <div class="col s12 m4 l8" style="background-color: rgba(112, 128, 144, 0.603)">
+                <canvas id="lineChart" height="1" width="3"></canvas>
+            </div>
+            <div class="col s12 m4 l2" style="background-color: rgb(206, 206, 250);">
+                <p class="flow-text" style="font-family: Pacifico;">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
 
-    <div class="row">
-        <div class="col s12" style="background-color: green;">
-            <h5 style="text-align: center; font-family:Pacifico">Sleep Tracker results</h5>
-        </div>
-        <div class="col s12 m4 l2" style="background-color: slategray;">
-            <p>user</p>
-            <p class="flow-text" style="font-family: Pacifico;">to the right you will see the hours of sleep you got along with your recommended hours of sleep based on your age</p>
-        </div>
-        <div class="col s12 m4 l8">
-            <canvas id="lineChart" height="1" width="3"></canvas>
-        </div>
-        <div class="col s12 m4 l2" style="background-color: rgb(206, 206, 250);">
-            <p class="flow-text" style="font-family: Pacifico;">The average amount of sleep that recommended depends on your age, needing more when your younger and less when your older</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6 l3" style="background-color: yellow;">
-            <p>s12 m6 l3</p>
-        </div>
-        <div class="col s12 m6 l3" style="background-color: olivedrab;">
-            <p>s12 m6 l3</p>
-        </div>
-        <div class="col s12 m6 l3" style="background-color: skyblue;">
-            <p>s12 m6 l3</p>
-        </div>
-        <div class="col s12 m6 l3" style="background-color: blueviolet;">
-            <p>s12 m6 l3</p>
+
+        <div class="row">
+            <div class="col s12 m6 l3" style="background-color: yellow;">
+                <p>s</p>
+            </div>
+            <div class="col s12 m6 l3" style="background-color: olivedrab;">
+                <p>possible section with average hours of sleep </p>
+            </div>
+            <div class="col s12 m6 l3" style="background-color: skyblue;">
+                <p>possible section of average time went to be and woke up</p>
+            </div>
+            <div class="col s12 m6 l3" style="background-color: blueviolet;">
+                <p>section of days days on/over target <br> and days missed</p>
+            </div>
         </div>
     </div>
 
 
     <!-- script for chart. 
-        Could be put in own js file if nesssary jut dont know where
+        Could be put in own js file if nesssary just dont know where
      be sure to link pages if/when js file is created -->
     <script>
         // var sleepAge = number get from DB
+        // var avgSleep = function() {
+        //     GET age from  specific user table
+        // }
         var ctx = document.getElementById('lineChart').getContext('2d');
         var chart = new Chart(ctx, {
-            // The type of chart we want to create
+            // The type of chart
             type: 'line',
 
             // The data for our dataset
@@ -84,24 +90,70 @@
                 labels: ['Sunday Night', 'Monday Night', 'Tuesday Night', 'Wednesday Night', 'Thursday Night', 'Friday Night', 'Saturday Night'],
                 datasets: [{
                     label: 'Your sleep',
-                    backgroundColor: 'rgb(255, 99, 132)',
-                    borderColor: 'rgb(255, 66, 100)',
+                    backgroundColor: 'rgb(255, 99, 100)',
+                    borderColor: 'rgb(210, 66, 100)',
                     data: [8, 6, 7, 9, 8.5, 6.5, 5.8] // each integer corresponds with the labels, add data as you add labels
                 }, {
-
                     label: 'Recommended',
                     backgroundColor: 'rgb(0, 150, 255)',
-                    borderColor: 'rgb(0, 99, 132)',
+                    borderColor: 'rgb(0, 99, 255)',
                     data: [8, 8, 8, 8, 8, 8, 8] //  insert var sleepAge or get age from database
 
                 }]
 
             },
-
-
             // Configuration options go here
-            options: {}
+            options: {
+                legend: {
+                    onHover: function(evt) {
+                        var item = myLineChart.getElementAtEvent(evt);
+                        if (item.length) {
+                            console.log("onHover", item, evt.type);
+                            console.log(">data", item[0]._index, data.datasets[0].data[item[0]._index]);
+                        }
+                    },
+
+                    labels: {
+                        fontColor: 'white'
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'white'
+                        },
+                        gridLines: {
+                            color: "#131c2b"
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false,
+                            fontColor: 'white'
+                        },
+                        gridLines: {
+                            color: "#131c2b"
+                        }
+                    }]
+                }
+            }
         });
+
+        // sleepGoal() {
+        //     var bedTime = getelementById("#test5");
+        //     var awakeTime = getElementById("#test6");
+        //     12- bedtime + awaketime + 12
+
+        // }
+
+        // might be???function to add the data from data.types.date
+        // function addData(chart, label, data) {
+        //     chart.data.labels.push(label);
+        //     chart.data.datasets.forEach((dataset) => {
+        //         dataset.data.push(data);
+        //     });
+        //     chart.update();
+        // }
     </script>
 
     <!--JavaScript at end of body for optimized loading-->
