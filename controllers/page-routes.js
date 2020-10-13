@@ -3,8 +3,6 @@ const path = require('path');
 const secured = require('./middleware/secured');
 const router = require('express').Router()
 
-dotenv.config();
-
 // GET home page. static, not secured
 router.get('/', function(req,res) {
   res.sendFile(path.join(__dirname, "../public/index.html"));
