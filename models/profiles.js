@@ -1,15 +1,13 @@
 // Table of User's Profile Settings
 module.exports = function(sequelize, DataTypes) {
   const Profiles = sequelize.define('Profiles', {
-    userID: {
-      // generated w/ auth0
-    },
-    nickname: {
-      // taken from auth0?
+    id: { //talk to TA 'bout this
+      type: DataTypes.BIGINT,
+      autoIncrement: true,
+      primaryKey: true
     },
     age: {
       type: DataTypes.STRING,
-      allowNull: true
     }
   });
   return Profiles;
