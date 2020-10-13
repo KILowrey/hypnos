@@ -1,7 +1,7 @@
 // This page is the routes for HTML and Handlebars
 const path = require('path');
 const secured = require('./middleware/secured');
-const router = require('express').Router()
+const router = require('express').Router();
 
 // GET home page. static, not secured
 router.get('/', function(req,res) {

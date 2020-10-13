@@ -1,6 +1,6 @@
-const calcDate = require('./scripts/date');
-const rightNow = require('./scripts/date');
-const calcHours = require('./scripts/date');
+const calcDate = require('./middleware/date');
+const rightNow = require('./middleware/date');
+const calcHours = require('./middleware/date');
 
 // Table of all User's Sleeps
 module.exports = function(sequelize, DataTypes) {
@@ -20,32 +20,27 @@ module.exports = function(sequelize, DataTypes) {
     },
     toBed: {
       type: DataTypes.STRING,
-      allowNull: false,
       validate: {
         isBefore: rightNow //what it looks like
       }
     },
     toSleep: {
       type: DataTypes.STRING,
-      allowNull: true
     },
     wokeUp: {
       type: DataTypes.STRING,
-      allowNull: false,
       validate: {
         isAfter: rightNow
       }
     },
     hours: {
-      calcHours //function that calculates the hours slept
+      calcHours // TODO function that calculates the hours slept
     },
     restful: {
       type: DataTypes.BOOLEAN,
-      allowNull: true //check w/ Diogo
     },
     rested: {
       type: DataTypes.BOOLEAN,
-      allowNull: true //check w/ Diogo
     }
   });
   return Sleeps;

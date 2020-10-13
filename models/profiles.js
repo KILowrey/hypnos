@@ -8,7 +8,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     age: {
       type: DataTypes.STRING,
-      allowNull: true // ask Diogo if it should be false
     }
   });
   return Profiles;
