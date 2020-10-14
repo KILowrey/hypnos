@@ -1,7 +1,6 @@
 // Dependencies
 var express = require('express');
 var exphbs = require("express-handlebars");
-var path = require('path');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var dotenv = require('dotenv');
@@ -21,7 +20,7 @@ var strategy = new Auth0Strategy(
     clientID: process.env.AUTH0_CLIENT_ID,
     clientSecret: process.env.AUTH0_CLIENT_SECRET,
     callbackURL:
-      process.env.AUTH0_CALLBACK_URL || 'http://localhost:3000/callback'
+      process.env.AUTH0_CALLBACK_URL || 'http://localhost:8080/callback'
   },
   function (accessToken, refreshToken, extraParams, profile, done) {
     // accessToken is the token to call Auth0 API (not needed in the most cases)
@@ -63,6 +62,7 @@ if (app.get('env') === 'production') {
   // Use secure cookies in production (requires SSL/TLS)
   sess.cookie.secure = true;
   // Uncomment the line below if your application is behind a proxy (like on Heroku)
+  sess.proxy = true;
   app.set('trust proxy', 1);
   // Ref: https://github.com/auth0/passport-auth0/issues/70#issuecomment-480771614
   // Ref: https://www.npmjs.com/package/express-session#cookiesecure
@@ -72,7 +72,7 @@ app.use(session(sess));
 
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 // Routes here:
 app.use(userInViews());
