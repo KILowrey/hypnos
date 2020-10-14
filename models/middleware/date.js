@@ -12,7 +12,7 @@ function calcDate() {
 const rightNow = new Date();
 // Calculate the hours of sleep and display it as a BIGINT
 function calcHours() {
-
+  // calculate the hours of sleep and display it as a bigint
 }
 
 module.exports = {
