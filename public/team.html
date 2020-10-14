@@ -7,7 +7,7 @@
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="../public/stylesheets/style.css">
-    <!-- <link rel= "stylesheet" href= "../public/stylesheets/materialize.css"> -->
+        <!-- <link rel= "stylesheet" href= "../public/stylesheets/materialize.css">-->
         <!-- icons link for materialize -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- font link for google fonts -->
@@ -30,15 +30,17 @@
             </div>
         </nav>
 
-        <section>
+       <section>
 
             <div id="index-banner" class="team-container">
                 <div class="section no-pad-bot">
                 <div class="container">
                       <br><br>
-                    <h1 class=" center text-lighten-2">HYPNOS</h1>
+                    <h1 class="center text-lighten-2">HYPNOS</h1>
                     <div class="row center">
-                    <h5 class="header col s12 black">A modern responsive front-end framework based on Material Design</h5>
+                    <p class="teaminfo col s12">
+                        There are numerous studies that showed the importance of a good night’s sleep. A good night’s sleep is essential to feel fresh, be active in the morning and make progress during the entire day. However, external factors (e.g: lighting, medication), internal factors (e.g: anxiety, body aches) and cultural differences among different societies can affect sleep timing and quality. <br>Due to these factors and the additional stress and uncertainty from the COVID-19 pandemic, our team decided to produce this app to help people sleep well.<br><br> We you hope enjoy it and get the best result!
+                    </p>
                     </div>
                 
                 </div>
@@ -129,6 +131,27 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
+    
+    <!-- JavaScript Navbar -->
+    <script>
+        console.log("hello")
+        var isNavOpen = false;
+
+        $("body").on("click", function(event) {
+            console.log(event.target.classList[0])
+            if(true === isNavOpen && "material-icons" !== event.target.classList[0]) {
+                console.log(isNavOpen)
+                $("#nav-mobile").css("transform", "translateX(-105%)");
+            }
+        });
+        $(".sidenav-trigger").on("click", function() {
+            console.log("hi")
+            $("#nav-mobile").css("transform", "translateX(0%) ");
+            isNavOpen = true;
+
+        }); 
+ 
+    </script>
 
 
 </body>

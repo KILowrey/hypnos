@@ -10,9 +10,9 @@
     <!-- <link rel= "stylesheet" href= "../public/stylesheets/materialize.css">-->
     <!-- icons link for materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- font link for google fonts -->
+    <!-- font link for google fonts 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron"> ​
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron"> ​-->
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                     <li><a href="../public/team.html"></i>Team</a></li>
                 </ul>
 
-            <a href="../views/team.html" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
 
         </div>
@@ -47,7 +47,6 @@
                     </div>
                 </div>
             </div>
-            <!--<div class="index"><img src="../public/images/sky.jpg" alt="Unsplashed background img 1"></div>-->
         </div>
 
         </div>
@@ -113,21 +112,30 @@
 
         <!--  Scripts-->
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/init.js"></script>
+       <!--<script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>-->
 
-
-    </body>
-    ​
-
-    <style>
-
-    </style>
-
-
-
-
+        <script>
+            console.log("hello")
+            var isNavOpen = false;
+    
+            $("body").on("click", function(event) {
+                console.log(event.target.classList[0])
+                if(true === isNavOpen && "material-icons" !== event.target.classList[0]) {
+                    console.log(isNavOpen)
+                    $("#nav-mobile").css("transform", "translateX(-105%)");
+                }
+            });
+            $(".sidenav-trigger").on("click", function() {
+                console.log("hi")
+                $("#nav-mobile").css("transform", "translateX(0%)");
+                isNavOpen = true;
+    
+            }); 
+     
+        </script>
+  
+   ​
 </body>
 ​
-
 </html>

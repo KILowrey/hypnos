@@ -1,6 +1,5 @@
-// TODO WIP
+// api-routes.js - this file offers a set of routes for displaying and saving data to the db
 
-// this page is the routes for API stuff
 const db = require('../models');
 
 // These are the routes
@@ -11,6 +10,10 @@ module.exports = function (app) {
     .then(function(dbProfiles) {
       res.json(dbProfiles);
     });
+  });
+  // POST route for saving a new user
+  app.post('api/profiles', function(req,res) {
+    // bla bla
   });
   // GET route for sleeps of a user
   app.get("/api/sleeps/user/:user", function(req,res) {
@@ -23,5 +26,9 @@ module.exports = function (app) {
       res.json(dbSleeps);
     });
   });
-  
+  // POST a new sleeps entry
+  app.post('/api/sleeps', function(req,res) {
+    // bla bla
+  })
 };
+
