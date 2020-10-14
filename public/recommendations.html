@@ -8,12 +8,12 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../public/stylesheets/style.css">
-    <link rel="stylesheet" href="../public/stylesheets/materialize.css">
+    <!-- <link rel="stylesheet" href="../public/stylesheets/materialize.css"> -->
     <!-- icons link for materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- font link for google fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron"> -->
     ​
 </head>
 
@@ -26,33 +26,30 @@
             background-repeat: no-repeat;
         }
 
-        nav {
+        /* nav {
             position: fixed;
             top: -1px;
             color: black;
             z-index: 1;
-        }
+        } */
     </style>
     ​
-    ​<nav class="white" role="navigation">
+    <nav class="navBar" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">Logo</a>
-            <ul id="nav-mobile" class="sidenav" class="right hide-on-med-and-down, sidenav">
-                <li><a href="#">User</a></li>
-            </ul>
-            <ul id="nav-mobile" class="sidenav" class="right hide-on-med-and-down, sidenav">
-                <li><a href="#">Team</a></li>
-            </ul>
-
-
-
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Team</a></li>
-            </ul>
+            <a id="logo-container" href="../public/index.html" class="brand-logo"> Hypnos</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../public/team.html">Team</a></li>
+                </ul>
+                <ul id="nav-mobile" class="sidenav">
+                    <li><a href="../public/team.html"></i>Team</a></li>
+                </ul>
 
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
         </div>
     </nav>
+
     <div class="container">
         ​​
         <div class="row">
@@ -164,10 +161,12 @@
                                         muscle relaxation, body
                                         scan meditation, and mindfulness can help calm individuals and decrease anxiety
                                         about going to sleep.
-                                    <br>
-                                    For more information on relaxation techniques, check out: <br>
-                                    
-                                    <a href="https://www.mayoclinic.org/healthy-lifestyle/stress-management/in-depth/relaxation-technique/art-20045368">Mayo Clinic</a>
+                                        <br>
+                                        For more information on relaxation techniques, check out: <br>
+
+                                        <a
+                                            href="https://www.mayoclinic.org/healthy-lifestyle/stress-management/in-depth/relaxation-technique/art-20045368">Mayo
+                                            Clinic</a>
                                     </span></div>
                             </li>
                             <li>
@@ -284,6 +283,24 @@
             $(document).ready(function () {
                 $('.collapsible').collapsible();
             });
+
+        
+    //     console.log(“hello”)
+    //    // $(“.sidenav-trigger”).css(“color”, “red”);ß
+    //     var isNavOpen = false;
+    //     $(“body”).on(“click”, function(event) {
+    //         console.log(event.target.classList[0])
+    //         if(true === isNavOpen && “material-icons” !== event.target.classList[0]) {
+    //             console.log(isNavOpen)
+    //             $(“#nav-mobile”).css(“transform”, “translateX(-105%)“);
+    //         }
+    //     });
+    //     $(“.sidenav-trigger”).on(“click”, function() {
+    //         console.log(“hi”)
+    //         $(“#nav-mobile”).css(“transform”, “translateX(0%)  “);
+    //         isNavOpen = true;
+    //     });
+   
         </script>
 </body>
 ​
