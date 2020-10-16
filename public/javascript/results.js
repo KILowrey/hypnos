@@ -1,4 +1,4 @@
-// $.get("/api/sleeps/user:")
+// $.get("/api/sleep/user:")
 var ctx = document.getElementById('lineChart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart
@@ -7,7 +7,7 @@ var chart = new Chart(ctx, {
     // The data for our dataset
     // data is FILLER
     data: {
-        labels: [Sleep.date, 'Monday Night', 'Tuesday Night', 'Wednesday Night', 'Thursday Night', 'Friday Night', 'Saturday Night'],
+        labels: ['Sunday Night', 'Monday Night', 'Tuesday Night', 'Wednesday Night', 'Thursday Night', 'Friday Night', 'Saturday Night'],
         datasets: [{
             label: 'Your sleep',
             backgroundColor: 'rgb(255, 99, 100)',
