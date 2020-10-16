@@ -8,7 +8,7 @@
     <!-- Compiled and minified CSS -->
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <!--<link rel= "stylesheet" href= "../public/stylesheets/materialize.css">-->
     <!-- icons link for materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,9 +26,9 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
-
+        
         nav {
-            position: fixed;
+            /* position: fixed; */
             top: -1px;
             color: black;
             z-index: 1;
@@ -37,18 +37,18 @@
     ​
     <nav class="navBar" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="../views/onBoard.handlebars" class="brand-logo"> Hypnos</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="../public/team.html">Team</a></li>
-                </ul>
-                <ul id="nav-mobile" class="sidenav">
-                    <li><a href="../public/team.html">Team</a></li>
-                </ul>
-           
-                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                
+            <a id="logo-container" href="/" class="brand-logo"> Hypnos</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/team">Team</a></li>
+            </ul>
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="/team">Team</a></li>
+            </ul>
+
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
         </div>
-        
+
     </nav>
 
 
@@ -166,8 +166,8 @@
                     <div class="card-action">
                         <ul class="collapsible popout">
                             <li>
-                                <div class="collapsible-header"><i class="material-icons">spa</i>Relaxation
-                                    Techniques</div>
+                                <div class="collapsible-header"><i class="material-icons">spa</i>Relaxation Techniques
+                                </div>
                                 <div class="collapsible-body"><span class="white-text">Deep breathing, progressive
                                         muscle relaxation, body
                                         scan meditation, and mindfulness can help calm individuals and decrease anxiety
@@ -181,8 +181,7 @@
                                     </span></div>
                             </li>
                             <li>
-                                <div class="collapsible-header"><i class="material-icons">supervisor_account</i>Let's
-                                    Talk it Out
+                                <div class="collapsible-header"><i class="material-icons">supervisor_account</i>Let's Talk it Out
                                 </div>
                                 <div class="collapsible-body"><span class="white-text">Cognitive-behavioral therapy can
                                         help you control or eliminate negative thoughts and worries that keep you awake.
@@ -197,8 +196,7 @@
                                         </p></span></div>
                             </li>
                             <li>
-                                <div class="collapsible-header"><i
-                                        class="material-icons">enhanced_encryption</i>Covid-19</div>
+                                <div class="collapsible-header"><i class="material-icons">enhanced_encryption</i>Covid-19</div>
                                 <div class="collapsible-body"><span class="white-text">With the Covid-19
                                         pandemic, there are two main contributors to
                                         the potential worsening of
@@ -235,8 +233,7 @@
                                         sleep.</span></div>
                             </li>
                             <li>
-                                <div class="collapsible-header"><i class="material-icons">battery_charging_full</i>That
-                                    Recharged Feeling</div>
+                                <div class="collapsible-header"><i class="material-icons">battery_charging_full</i>That Recharged Feeling</div>
                                 <div class="collapsible-body"><span class="white-text">Getting sleep is crucial for a
                                         variety of
                                         reasons. A good night's sleep:
@@ -309,6 +306,6 @@
         //         isNavOpen = true;
         //     });
 
-        
+        </script>
 </body>
 ​</html>

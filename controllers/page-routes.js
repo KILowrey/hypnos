@@ -29,8 +29,16 @@ router.get('/questions', secured(), function(req, res) {
     res.render('onBoard', { title: 'Questionnaire' });
 });
 // GET tables page. dynamic, secured
+// router.get('/results', secured(), function(req, res) {
+//     res.render('results', { title: 'Sleep Table' });
+// });
 router.get('/results', secured(), function(req, res) {
-    res.render('results', { title: 'Sleep Table' });
+    const { _raw, _json, ...userProfile } = req.user;
+    res.render('results', {
+        // this line gives all the user data
+        userProfile: JSON.stringify(userProfile, null, 2),
+        title: 'Sleep table'
+    });
 });
 
 module.exports = router;
