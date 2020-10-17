@@ -5,18 +5,18 @@ const db = require('../models');
 // These are the routes
 module.exports = function (app) {
   // GET route for getting all users
-  app.get("/api/profiles/", function(req,res) {
+  app.get("/api/profile/", function(req,res) {
     db.Profiles.findAll({})
     .then(function(dbProfiles) {
       res.json(dbProfiles);
     });
   });
   // POST route for saving a new user
-  app.post('api/profiles', function(req,res) {
+  app.post('api/profile', function(req,res) {
     // bla bla
   });
   // GET route for sleeps of a user
-  app.get("/api/sleeps/user/:user", function(req,res) {
+  app.get("/api/sleep/user/:user", function(req,res) {
     db.Sleeps.findAll({
       where: {
         user: req.params.user
@@ -27,7 +27,7 @@ module.exports = function (app) {
     });
   });
   // POST a new sleeps entry
-  app.post('/api/sleeps', function(req,res) {
+  app.post('/api/sleep', function(req,res) {
     // bla bla
   })
 };
