@@ -15,33 +15,7 @@
 </head>
 
 
-{{!-- <nav class="navBar" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">Hypnos</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="/team">Team</a></li>
-            </ul>
-            <ul id="nav-mobile" class="sidenav">
-                <li><a href="/team">Team</a></li>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="/onBoard">Main</a></li>
-            </ul>
-            <ul id="nav-mobile" class="sidenav">
-                <li><a href="/onBoard">Main</a></li>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="/">Home</a></li>
-            </ul>
-            <ul id="nav-mobile" class="sidenav">
-                <li><a href="/">Home</a></li>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="/recommendations">Recommnedations</a></li>
-            </ul>
-            <ul id="nav-mobile" class="sidenav">
-                <li><a href="/recommendations">Recommnedations</a></li>
-            </ul> --}}
+
 <div class= "w3-container" style="background-image: url(/images/Emerald-Bay-sunset-by-Levi-Bare.jpg);background-size: cover;">
 <div style="background-image: url(/images/Emerald-Bay-sunset-by-Levi-Bare.jpg);background-size: cover;">
     <div class="chart-container" style="position: relative;">
@@ -50,8 +24,8 @@
                 <h5 style="text-align: center; color:white; font-family:Corgette">Sleep Tracker results</h5>
             </div>
             <div class="col s12 m4 l2" style="background-color: slategray;">
-                {{user.nickname}}
-                <p class="flow-text" style="font-family: Righteous;"></p>
+                <img src="{{user.picture}}" alt="user photo">
+                <p class="flow-text" style="font-family: Righteous; color: white">{{user.displayName}}</p>
             </div>
             <div class="col s12 m4 l8" style="background-color: rgba(112, 128, 144, 0.603)">
                 <canvas id="lineChart" height="1" width="3"></canvas>
