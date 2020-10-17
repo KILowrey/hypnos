@@ -7,7 +7,7 @@
     <title>Hypnos| survey</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- font link for google fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers">
@@ -17,12 +17,12 @@
 <body>
     <nav class="navBar" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="../views/onBoard.handlebars" class="brand-logo"> Hypnos</a>
+            <a id="logo-container" href="/index.html" class="brand-logo"> Hypnos</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="../public/team.html">Team</a></li>
+                    <li><a href="/team.html">Team</a></li>
                 </ul>
                 <ul id="nav-mobile" class="sidenav">
-                    <li><a href="../public/team.html">Team</a></li>
+                    <li><a href="/team.html">Team</a></li>
                 </ul>
            
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -33,7 +33,7 @@
     <section>
         <div class="container">
             <div class="row">
-                {{#unless user.age}}
+            {{#unless user.age}}
                 <div class="col-md-7 main-section" id="link-box" >
                    
                     <form class="ageForm">
@@ -47,11 +47,11 @@
                               <span>18 - 25 years</span>
                         </label></p>
                         <p><label>
-                            <input class="with-gap btn age" name="age" type="radio" value="18 - 25 years"/>
+                            <input class="with-gap btn age" name="age" type="radio" value="26 - 64 years"/>
                             <span>26 - 64 years</span>
                       </label></p>
                       <p><label>
-                        <input class="with-gap btn age" name="age" type="radio" value="18 - 25 years"/>
+                        <input class="with-gap btn age" name="age" type="radio" value="> 65 years"/>
                         <span>> 65 years</span>
                      </label></p>
                     <br>                 
@@ -62,7 +62,7 @@
                     </form> 
 
                 </div>
-                {{/unless}}
+            {{/unless}}
             </div>
         </div>
 
@@ -73,19 +73,19 @@
                   <form class="surveyForm">
                     <h5>What time did you go to bed?</h5>
                         <p><label>
-                            <input class="with-gap" name="bedTime" type="radio"  value="7:00 - 9:00 pm"/>
+                            <input class="with-gap survey" name="bedTime" type="radio"  value="7:00 - 9:00 pm"/>
                             <span>7:00 - 9:00 pm </span>
                         </label></p>
                         <p><label>
-                              <input class="with-gap" name="bedTime" type="radio" value="9:00 - 11:00 pm"/>
+                              <input class="with-gap survey" name="bedTime" type="radio" value="9:00 - 11:00 pm"/>
                               <span>9:00 - 11:00 pm</span>
                         </label></p>
                         <p><label>
-                            <input class="with-gap" name="bedTime" type="radio" value="11:00 pm - 1:00 am"/>
+                            <input class="with-gap survey" name="bedTime" type="radio" value="11:00 pm - 1:00 am"/>
                             <span>11:00 pm - 1:00 am</span>
                       </label></p>
                       <p><label>
-                        <input class="with-gap" name="bedTime" type="radio" value="1:00 am - 3:00 am"/>
+                        <input class="with-gap survey" name="bedTime" type="radio" value="1:00 am - 3:00 am"/>
                         <span>1:00 am - 3:00 am</span>
                      </label></p>
                     <br>
@@ -93,39 +93,39 @@
 
                     <h5>What time did you wake up?</h5>
                         <p><label>
-                            <input class="with-gap" name="wakeUp" type="radio" value="3:00 - 5:00 am"/>
+                            <input class="with-gap survey" name="wakeUp" type="radio" value="3:00 - 5:00 am"/>
                             <span>3:00 - 5:00 am </span>
                         </label></p>
                         <p><label>
-                              <input class="with-gap" name="wakeUp" type="radio" value="5:00 - 7:00 am"/>
+                              <input class="with-gap survey" name="wakeUp" type="radio" value="5:00 - 7:00 am"/>
                               <span>5:00 - 7:00 am</span>
                         </label></p>
                         <p><label>
-                            <input class="with-gap" name="wakeUp" type="radio" value="7:00 - 9:00 am"/>
+                            <input class="with-gap survey" name="wakeUp" type="radio" value="7:00 - 9:00 am"/>
                             <span>7:00 - 9:00 am</span>
                       </label></p>
                       <p><label>
-                        <input class="with-gap" name="wakeUp" type="radio" value="9:00 am - 11:00 am"/>
+                        <input class="with-gap survey" name="wakeUp" type="radio" value="9:00 am - 11:00 am"/>
                         <span>9:00 am - 11:00 am</span>
                      </label></p>
                     <br>
 
                     <h5>How long did you take to fall asleep?</h5>
-                   
+
                         <p><label>
-                            <input class="with-gap" name="asleep" type="radio" value="Less than 10 minutes"/>
+                            <input class="with-gap survey" name="asleep" type="radio" value="Less than 10 minutes"/>
                             <span>Less than 10 minutes</span>
                         </label></p>
                         <p><label>
-                              <input class="with-gap" name="asleep" type="radio" value="30 minutes"/>
+                              <input class="with-gap survey" name="asleep" type="radio" value="30 minutes"/>
                               <span>30 minutes</span>
                         </label></p>
                         <p><label>
-                            <input class="with-gap" name="asleep" type="radio" value="1 hour"/>
+                            <input class="with-gap survey" name="asleep" type="radio" value="1 hour"/>
                             <span>1 hour</span>
                       </label></p>
                       <p><label>
-                        <input class="with-gap" name="asleep" type="radio" value="More than an hour"/>
+                        <input class="with-gap survey" name="asleep" type="radio" value="More than an hour"/>
                         <span>More than an hour</span>
                      </label></p>
                     <br>
@@ -133,11 +133,11 @@
                     <h5>Do you feel rested?</h5>
                     
                         <p><label>
-                            <input class="with-gap" name="rested" type="radio" value="Yes" />
+                            <input class="with-gap survey" name="rested" type="radio" value="Yes" />
                             <span>Yes</span>
                         </label></p>
                         <p><label>
-                            <input class="with-gap" name="rested" type="radio" value="No"/>
+                            <input class="with-gap survey" name="rested" type="radio" value="No"/>
                             <span>No</span>
                         </label></p>
                      <br>
