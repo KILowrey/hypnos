@@ -25,7 +25,7 @@ $(document).ready(function() {
     
     function selectedAge(age){
         console.log(age)
-        $.post("api/profiles") 
+        $.post("api/profile") 
         
         .then(function(value) {
             throw new Error('oh, no!');
@@ -56,7 +56,7 @@ $(document).ready(function() {
 
     function selectedData(survey){
         console.log(survey)
-        $.post("/api/sleeps")  
+        $.post("/api/sleep")  
 
         .then(function(value) {
             throw new Error('oh, no!');
